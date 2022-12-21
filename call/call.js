@@ -4,3 +4,19 @@ var multi = function (m) {
 }
 console.log(multi.call(obj, 5));
 
+let name = {
+    firstName: 'kunal',
+    lastName: 'Mishra',
+    printname: function () {
+        console.log(this.firstName + ' ' + this.lastName);
+    }
+}
+name.printname();
+let name2 = {
+    firstName: 'karan',
+    lastName: 'sharma',
+
+
+}
+
+name.printname.call(name2);
