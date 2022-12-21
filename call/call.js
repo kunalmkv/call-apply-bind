@@ -7,11 +7,11 @@ console.log(multi.call(obj, 5));
 let name = {
     firstName: 'kunal',
     lastName: 'Mishra',
-    printname: function () {
-        console.log(this.firstName + ' ' + this.lastName);
-    }
 }
-name.printname();
+let printname = function () {
+    console.log(this.firstName + ' ' + this.lastName);
+}
+printname.call(name);
 let name2 = {
     firstName: 'karan',
     lastName: 'sharma',
@@ -19,4 +19,4 @@ let name2 = {
 
 }
 
-name.printname.call(name2);
+printname.call(name2);
